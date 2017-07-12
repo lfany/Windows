@@ -7,9 +7,9 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 set(SOURCE_FILES
         tool.cpp
         tool.rc)
-link_libraries(wininet)
 
-add_executable(hosts ${SOURCE_FILES})
+add_executable(tools ${SOURCE_FILES})
+target_link_libraries(tools wininet)
 
 set(OBJECT_SOURCE_CODE
         object-runwithcode/choose.cpp
